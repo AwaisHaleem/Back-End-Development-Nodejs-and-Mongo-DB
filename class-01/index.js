@@ -29,4 +29,22 @@
 // 2: Method - work of API(method), CRUD operations(method), Post(add story, add pic, send request to add data, it can also return response), Get(send request to get data), Put(request to edit data), Delete(request to delete data)
 // 3: Status - status tells about the type of response, etc 200-Ok, 201-Created, 400-BadRequest, 401-Unathourized
 
-console.log("hello world!");
+
+// Hello World
+// console.log("hello world!");
+
+
+// imorting express
+const express = require('express');
+
+const app = express();
+const port = 50;
+
+
+app.get('/', (req, res) => {
+    res.send('Hello world to first API');
+})
+
+app.listen(port, () => {
+    console.log('Server is running')
+})
