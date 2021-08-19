@@ -42,7 +42,7 @@ const port = 50;
 
 
 app.get('/', (req, res) => {
-    res.send('Hello world to first API');
+    res.send('Hello world to 1st API');
 })
 
 app.listen(port, () => {
