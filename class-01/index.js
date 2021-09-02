@@ -36,13 +36,25 @@
 
 // imorting express
 const express = require('express');
+const cores = require('cores')
+const bd = require('body-parser');
 
 const app = express();
 const port = 50;
 
+app.use(cores())
+app.use(bd.urlencoded({
+    extended: false
+}))
+app.use(bd.json())
 
 app.get('/', (req, res) => {
     res.send('Hello world to 1st API');
+})
+
+app.post('/signup', (req, res) => {
+    // res.send("signup API")
+    console.log(req.body)
 })
 
 app.listen(port, () => {
